@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bhargav MC - Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset & fonts */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%);
+      color: #212529;
+      scroll-behavior: smooth;
+    }
+    /* Navbar styling */
+    nav.navbar {
+      background-color: rgba(255 255 255 / 0.95);
+      box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+      transition: background-color 0.3s ease;
+    }
+    nav.navbar.scrolled {
+      background-color: #0d6efd;
+      box-shadow: 0 2px 15px rgb(13 110 253 / 0.7);
+    }
+    nav.navbar.scrolled .nav-link,
+    nav.navbar.scrolled .navbar-brand {
+      color: #fff !important;
+    }
+    nav.navbar .navbar-brand {
+      font-weight: 700;
+      color: #0d6efd;
+      transition: color 0.3s ease;
+    }
+    nav.navbar .nav-link {
+      color: #0d6efd;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav.navbar .nav-link:hover {
+      color: #6610f2;
+    }
+
+    /* Container */
+    .container {
+      max-width: 960px;
+    }
+
+    /* Section styling */
+    section {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 40px 30px;
+      margin-bottom: 40px;
+      box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
+      transition: transform 0.3s ease;
+    }
+    section:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 40px rgb(0 0 0 / 0.15);
+    }
+
+    .section-title {
+      border-bottom: 4px solid #0d6efd;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #0d6efd;
+    }
+
+    /* Header */
+    header {
+      color: white;
+      text-align: center;
+      margin-bottom: 60px;
+      user-select: none;
+    }
+    header h1 {
+      font-weight: 800;
+      font-size: 3rem;
+      letter-spacing: 2px;
+    }
+    header h4 {
+      font-weight: 500;
+      letter-spacing: 3px;
+      opacity: 0.85;
+    }
+
+    /* Contact Icons */
+    .contact-info i {
+      color: #0d6efd;
+      margin-right: 10px;
+      font-size: 1.2rem;
+      vertical-align: middle;
+    }
+
+    /* Skills */
+    .skills-list li {
+      list-style: none;
+      margin-bottom: 8px;
+      padding-left: 15px;
+      position: relative;
+      font-weight: 500;
+      color: #444;
+    }
+    .skills-list li::before {
+      content: '•';
+      color: #0d6efd;
+      position: absolute;
+      left: 0;
+      font-weight: 700;
+      font-size: 1.2rem;
+      line-height: 0;
+      top: 6px;
+    }
+
+    /* Lists */
+    ul, li {
+      line-height: 1.6;
+    }
+
+    /* Project titles */
+    section h5 {
+      font-weight: 600;
+      color: #6610f2;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: white;
+      font-weight: 500;
+      user-select: none;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.4rem;
+      }
+      header h4 {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar navbar-expand-lg fixed-top shadow-sm">
+    <div class="container">
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold">
+          <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main container -->
+  <div class="container py-5" id="home" style="padding-top: 100px;">
+    <!-- Header -->
+    <header>
+      <h1>Bhargav Mullangi Chenchu</h1>
+    </header>
+
+    <div class="row">
+      <!-- Left column: Contact + Skills -->
+      <div class="col-lg-4 mb-4">
+        <!-- Contact -->
+        <section id="contact" class="mb-4">
+          <h3 class="section-title">Contact</h3>
+          <ul class="list-unstyled contact-info fs-5">
+            <li><i class="bi bi-telephone-fill"></i> +91 8688147045</li>
+            <li><i class="bi bi-envelope-fill"></i> bhargavmc034@gmail.com</li>
+          </ul>
+        </section>
+
+        <!-- Skills -->
+        <section>
+          <h3 class="section-title">Skills</h3>
+          <h5>Programming Languages</h5>
+          <ul class="skills-list mb-3">
+            <li>C, Java, C++ (Beginner)</li>
+            <li>Python, SQL, HTML, CSS, JS (Intermediate)</li>
+            <li>Django</li>
+          </ul>
+          <h5>Tools</h5>
+          <ul class="skills-list mb-3">
+            <li>MS Office, MS Excel</li>
+          </ul>
+          <h5>Machine Learning</h5>
+          <ul class="skills-list mb-3">
+            <li>Understanding of Data Models (Beginner)</li>
+          </ul>
+          <h5>Soft Skills</h5>
+          <ul class="skills-list">
+            <li>Analytical thinking, Problem solving, Team collaboration</li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- Right column: Main content -->
+      <div class="col-lg-8">
+        <!-- About Me -->
+        <section id="about" class="mb-5">
+          <h3 class="section-title">About Me</h3>
+          <p>
+            Aspiring technology professional currently pursuing a B.Tech degree with a focus on software development and data analysis.
+            Adept at employing analytical skills and innovative thinking to tackle complex problems, aiming to leverage knowledge and experience within a challenging work environment.
+            Passionate about contributing to team and organizational goals through creative solutions and collaborative efforts.
+          </p>
+        </section>
+
+        <!-- Education -->
+        <section id="education" class="mb-5">
+          <h3 class="section-title">Education</h3>
+          <ul class="list-unstyled fs-5">
+            <li><strong>Bachelor of Technology (B.Tech)</strong>, Madanapalle Institute of Technology and Sciences, Madanapalle<br />
+              Expected Graduation: 2027
+            </li>
+            <li class="mt-3"><strong>Diploma in Engineering</strong>, Sri Venkateswara College of Engineering and Technology<br />
+              Graduated: 2024 | Percentage: 89.8%
+            </li>
+            <li class="mt-3"><strong>Secondary School Certificate (SSC)</strong>, B.Z. High School<br />
+              Graduated: 2021 | Percentage: 98%
+            </li>
+          </ul>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="mb-5">
+          <h3 class="section-title">Experience</h3>
+          <p><strong>Project Intern / Developer (Fresher)</strong></p>
+          <ul class="fs-5">
+            <li>Gained hands-on experience developing responsive web applications using HTML, CSS, JavaScript, and React.js.</li>
+            <li>Currently working on a React Native project, enhancing mobile development skills and cross-platform UI integration.</li>
+            <li>Built multiple projects using React.js and Django, demonstrating front-end and back-end coordination.</li>
+            <li>Applied basic Machine Learning concepts in project environments to solve real-world problems.</li>
+            <li>Familiar with core programming languages like Python and Java and understand SQL fundamentals for database operations.</li>
+            <li>Collaborated in team-based academic settings and followed agile practices in personal project management.</li>
+          </ul>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="mb-5">
+          <h3 class="section-title">Projects</h3>
+          <div class="mb-4">
+            <h5>Age and Gender Detection (Mini Project)</h5>
+            <p>Built a deep learning model using CNN to predict age and gender from facial images. Achieved high accuracy by optimizing hyperparameters and training on large datasets. Demonstrated strong skills in computer vision, deep learning, and model evaluation.</p>
+          </div>
+          <div class="mb-4">
+            <h5>Bus Tracking Application (Ongoing)</h5>
+            <p>Designed a real-time bus tracking application using React Native and Firebase to improve public transport transparency in Andhra Pradesh. Developed location tracking logic to capture live data from the conductor’s TIM (Ticket Issuing Machine) and display updates on maps for passengers, ensuring seamless updates in low-network areas.</p>
+          </div>
+          <div class="mb-4">
+            <h5>Ticket Exchanging System (Ongoing)</h5>
+            <p>Built a digital platform enabling users to exchange or resell unused tickets, aiming to reduce ticket waste and improve accessibility. Designed the front end using React, integrated secure ticket validation, and managed data with Firebase for real-time updates.</p>
+          </div>
+          <div>
+            <h5>NoDue Web Application</h5>
+            <p>Built a Full Stack Web Application using HTML, CSS, JavaScript, React.js, and Django during an internship at Technohub (Asar IT Technologies). Developed responsive student and faculty dashboards using React.js integrated with Django REST APIs to display dynamic data such as subject details and due status. Implemented features like login, OTP email verification, and popup modals. Utilized Flexbox and Grid for modern layout design and managed page navigation using React Router. Collaborated with the backend team via Git & GitHub.</p>
+          </div>
+        </section>
+
+        <!-- Certifications -->
+        <section id="certifications">
+          <h3 class="section-title">Certifications and Awards</h3>
+          <ul class="fs-5">
+            <li>Completed NPTEL course on Intellectual Property for Engineers and Technologists with Elite Certification</li>
+            <li>Completed Digital 101 certification under NASSCOM Future Skills program</li>
+            <li>Participated in a 7-day bootcamp on DevOps Fundamentals and CI/CD Tools</li>
+            <li>Received participation certificate for attending a seminar on Cybersecurity conducted under ISTE</li>
+            <li>Completed NPTEL course on Understanding Incubation and Entrepreneurship With Gold Certification</li>
+            <li>Acquiring Data – Gold Certification, NASSCOM – IT-ITeS SSC, Score: 83%, NSQF Level 6, June 2025</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Bhargav Mullangi. All rights reserved.
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Navbar color change on scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
